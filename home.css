@@ -418,7 +418,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     width: 80%;
-    max-width: 1000px;
+    max-width: 1500px;
     padding: 20px;
 }
 
