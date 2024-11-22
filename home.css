@@ -342,7 +342,7 @@ section {
 }
 
 .about-content {
-    font-size: 14px ;
+    font-size: 18px ;
     color: #000000;
     flex: 2;
     padding: 1rem;
@@ -371,6 +371,7 @@ section {
     }
 
     .about-content {
+        font-size: 16px ;
         padding: 0.5rem; /* Reduce padding */
     }
 }
@@ -395,6 +396,7 @@ section {
     }
 
     .about-content {
+        font-size: 14px ;
         padding: 0; /* Remove padding */
     }
 }
@@ -409,7 +411,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px; /* Add padding to avoid overlap with fixed navbar */
+    padding-top: 60px; /* Avoid overlap with fixed navbar */
     background-color: #F8F4E1;
 }
 
@@ -418,7 +420,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     width: 80%;
-    max-width: 1500px;
+    max-width: 1000px;
     padding: 20px;
 }
 
@@ -428,6 +430,10 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    display: flex; /* Flex container for alignment */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Ensure equal spacing */
+    height: 100%; /* Make cards equal in height */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -438,6 +444,16 @@ section {
     margin-bottom: 15px;
 }
 
+.project-card .description {
+    flex: 1; /* Push content below to the bottom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F4E1;
+    font-size: 14px;
+    margin-bottom: 15px; /* Space between text and button */
+}
+
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
@@ -445,18 +461,22 @@ section {
 
 .view-project-link {
     display: inline-block;
-    margin-top: 10px;
+    width: 50%; /* Set width to 50% */
+    margin: 0 auto; /* Center horizontally */
     padding: 10px 20px;
     background-color: #74512D;
     color: #F8F4E1;
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s ease;
+    text-align: center; /* Center the text inside the button */
 }
 
 .view-project-link:hover {
     background-color: #543310;
 }
+
+
 
 /* Responsive styles for #projects */
 @media (max-width: 768px) {
@@ -480,6 +500,8 @@ section {
     }
 
     .view-project-link {
+        width: 50%; /* Keep button width at 50% */
+        margin: 0 auto; /* Center the button */
         padding: 8px 15px; /* Adjust button padding */
         font-size: 14px; /* Reduce font size */
     }
@@ -511,6 +533,8 @@ section {
     }
 
     .view-project-link {
+        width: 50%; /* Keep button width at 50% */
+        margin: 0 auto; /* Center the button */
         padding: 6px 12px; /* Further adjust button padding */
         font-size: 12px; /* Further reduce font size */
     }
@@ -520,6 +544,7 @@ section {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
     }
 }
+
 
 /* Skills Section  */
 
@@ -647,57 +672,91 @@ h3 {
 
 /* Contact Section */
 
-#contact {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px; /* Add padding to avoid overlap with fixed navbar */
+/* Contact Section */
+.contact-section {
     background-color: #F8F4E1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #74512D;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    font-size: 18px;
     color: #543310;
+    margin-bottom: 40px;
 }
 
 .contact-form {
-    width: 80%;
     max-width: 600px;
+    margin: 0 auto;
     background-color: #AF8F6F;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form label {
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-label {
+    display: block;
+    font-size: 16px;
+    color: #74512D;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-.contact-form input,
-.contact-form textarea {
+.input-field {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #74512D;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 2px solid #74512D;
+    border-radius: 8px;
+    background-color: #F8F4E1;
+    color: #543310;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.input-field:focus {
+    border-color: #543310;
+    background-color: #fff;
+    outline: none;
+}
+
+.submit-btn {
     background-color: #74512D;
     color: #F8F4E1;
-    font-size: 1rem;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-form button:hover {
+.submit-btn:hover {
     background-color: #543310;
+    transform: translateY(-3px);
 }
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
 
 /* Responsive styles for #contact */
 @media (max-width: 768px) {

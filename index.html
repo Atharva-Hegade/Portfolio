@@ -7,6 +7,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "JH-HW7az-4K0tEgSh",
+            });
+        })();
+    </script>
     <script src="/script.js"></script>
     <title>Atharva Hegade</title>
     <link rel="icon" type="image/x-icon" href="/images/logo2.png">
@@ -22,9 +32,9 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#footer">Contact</a></li>
             </ul>
-            <div class="hire-now">
+            <!--<div class="hire-now">
                 <button>Hire Now</button>
-            </div>
+            </div>-->
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -44,7 +54,7 @@
             <div class="text-column">
                 <h1 class="animate-heading">ATHARVA HEGADE</h1>
                 <h3 class="animate-subheading">
-                    <span class="typing-text">WEB DEVELOPER | BackEnd Developer | GEN AI Engineer</span>
+                    <span class="typing-text">WEB DEVELOPER | BackEnd Developer | AI Engineer</span>
                 </h3>
             </div>
             <div class="photo-column">
@@ -65,7 +75,11 @@
                 <img src="/images/upprofile.JPG" alt="About Me Picture">
             </div>
             <div class="about-content">
-                <p>Hi, I'm ATHARVA , a passionate web developer with experience in creating dynamic and responsive websites. I specialize in front-end development and have a keen eye for design. I love coding and continuously learning new technologies to enhance my skills.</p>
+                <p>Hello! I'm Atharva Hegade, a passionate web developer, backend expert, and AI enthusiast. With expertise in Python, TypeScript, and Nest.js, I specialize in building innovative solutions and creating scalable applications.<br>
+
+                    I love solving problems, automating tasks, and optimizing performance. When I'm not coding, you’ll probably find me enjoying a cup of coffee or diving into new technologies. I believe in writing clean, efficient code that makes a real impact.<br><br>
+
+                    Let's build something awesome together!</p>
             </div>
         </div>
     </section>
@@ -78,33 +92,22 @@
     <div class="projects-grid">
         <div class="project-card">
             <img src="/images/DDE.jpg" alt="Project 1 Image">
-            <h3>DDE</h3>
-            <p>Daily Dose of Engineering is platform for students to engage and learn syllabus needed for placement in simple and short way </p>
+            <h3>Daily Dose of Engineering (DDE)</h3>
+            <p>Created using Glide, a no-code app-building platform, DDE is a platform designed to help students easily engage with and learn essential syllabus content for placements. The app simplifies complex topics into bite-sized lessons, ensuring quick and effective learning. </p>
             <a href="https://daily-dose-of-engineering.glide.page/" target="_blank" class="view-project-link">View Project</a>
         </div>
         <div class="project-card">
-            <img src="/images/project-4.png" alt="Project 2 Image">
-            <h3>Project 2</h3>
-            <p>Details about Project 2...</p>
-            <a href="#projects" class="view-project-link">View Project</a>
+            <img src="/images/project-9.png" alt="Project 2 Image">
+            <h3>Rental Application Backend</h3>
+            <p>Developed a scalable and efficient backend system for a rental application using the Nest framework and TypeScript. This project features RESTful APIs for managing property listings, user authentication, and rental transactions. Ensures robust data validation and seamless integration with front-end interfaces. </p>
+            <a href="https://github.com/Atharva-Hegade/Rental-Project-Backend" target="_blank" class="view-project-link">View Project</a>
         </div>
-        <div class="project-card">
-            <img src="/images/project-8.jpg" alt="Project 3 Image">
-            <h3>Project 3</h3>
-            <p>Details about Project 3...</p>
-            <a href="#projects" class="view-project-link">View Project</a>
-        </div>
-        <div class="project-card">
-            <img src="/images/project-9.png" alt="Project 4 Image">
-            <h3>Project 4</h3>
-            <p>Details about Project 4...</p>
-            <a href="#projects" class="view-project-link">View Project</a>
-        </div>
+
     </div>
 </section>
 
 
-<!-- Skils Section -->
+<!-- Skills Section -->
  
 <section id="skills">
     <h2>Skills</h2>
@@ -134,54 +137,51 @@
             <h3>python</h3>
         </div>
         <div class="skill-card">
-            <div class="skill-icon"><img src="/images/sql.png" alt=""></div>
-            <h3>sql</h3>
-        </div>
-        <div class="skill-card">
-            <div class="skill-icon"><img src="/images/aws.png" alt=""></div>
-            <h3>aws</h3>
-        </div>
-        <div class="skill-card">
             <div class="skill-icon"><img src="/images/react.png" alt=""></div>
             <h3>React</h3>
         </div>
+        <div class="skill-card">
+            <div class="skill-icon"><img src="/images/NestJS.png" alt=""></div>
+            <h3>Nestjs</h3>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon"><img src="/images/Postgresql.png" alt=""></div>
+            <h3>PostgreSQL</h3>
+        </div>
+
     </div>
 </section>
 
 
 <!-- Contact Section -->
-<!-- 
-<section id="contact">
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-description">I would love to hear from you! Fill out the form below, and we'll get in touch with you shortly.</p>
 
-    <h2>Contact</h2>
-    <form class="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <form class="contact-form">
+            <div class="input-group">
+                <label for="name" class="input-label">Name</label>
+                <input type="text" id="name" name="name" class="input-field" required>
+            </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+            <div class="input-group">
+                <label for="email" class="input-label">Email</label>
+                <input type="email" id="email" name="email" class="input-field" required>
+            </div>
 
-        <label for="phone">Mobile No</label>
-        <input type="tel" id="phone" name="phone" required> 
+            <div class="input-group">
+                <label for="phone" class="input-label">Mobile No</label>
+                <input type="tel" id="phone" name="phone" class="input-field" required>
+            </div>
+            <div class="input-group">
+                <label for="message" class="input-label">Message</label>
+                <textarea id="message" name="message" class="input-field" required ></textarea>
+            </div>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit" class="submit-btn" onclick="sendMail()">Submit</button>
+        </form>
+    </section>
 
-    <div class="social-media">
-        <a href="https://twitter.com/yourprofile" target="_blank">
-            <img src="/images/twitter.png" alt="Twitter">
-        </a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-            <img src="/images/linkedin (1).png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/yourprofile" target="_blank">
-            <img src="/images/github-sign.png" alt="GitHub">
-        </a>
-        <a href="https://www.instagram.com/yourprofile" target="_blank">
-            <img src="/images/instagram (1).png" alt="Instagram">
-        </a>
-    </div>
-</section> -->
 
 <!-- Footer Section -->
 
